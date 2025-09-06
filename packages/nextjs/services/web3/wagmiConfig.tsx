@@ -28,6 +28,17 @@ export const wagmiConfig = createConfig({
         rpcFallbacks = isUsingDefaultKey ? [http(), http(alchemyHttpUrl)] : [http(alchemyHttpUrl), http()];
       }
     }
+    
+    // For mainnet, add additional RPC providers for better ENS resolution
+    if (chain.id === 1) {
+      rpcFallbacks = [
+        ...rpcFallbacks,
+        http("https://eth.llamarpc.com"),
+        http("https://rpc.ankr.com/eth"),
+        http("https://ethereum.publicnode.com")
+      ];
+    }
+    
     return createClient({
       chain,
       transport: fallback(rpcFallbacks),

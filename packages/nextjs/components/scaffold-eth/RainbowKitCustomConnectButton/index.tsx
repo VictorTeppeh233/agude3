@@ -8,6 +8,8 @@ import { RevealBurnerPKModal } from "./RevealBurnerPKModal";
 import { WrongNetworkDropdown } from "./WrongNetworkDropdown";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { Address } from "viem";
+import { normalize } from "viem/ens";
+import { useEnsAvatar, useEnsName } from "wagmi";
 import { useNetworkColor } from "~~/hooks/scaffold-eth";
 import { useTargetNetwork } from "~~/hooks/scaffold-eth/useTargetNetwork";
 import { getBlockExplorerAddressLink } from "~~/utils/scaffold-eth";
@@ -27,6 +29,38 @@ export const RainbowKitCustomConnectButton = () => {
           ? getBlockExplorerAddressLink(targetNetwork, account.address)
           : undefined;
 
+        // ENS resolution for current network (Sepolia, Mainnet, etc.)
+        const { data: ensName, isLoading: isEnsNameLoading, error: ensNameError } = useEnsName({
+          address: account?.address as Address,
+          chainId: chain?.id, // Use current network for ENS resolution
+          query: {
+            enabled: Boolean(account?.address && chain?.id),
+          },
+        });
+
+        const { data: ensAvatar, isLoading: isEnsAvatarLoading, error: ensAvatarError } = useEnsAvatar({
+          name: ensName ? normalize(ensName) : undefined,
+          chainId: chain?.id, // Use current network for ENS resolution
+          query: {
+            enabled: Boolean(ensName && chain?.id),
+          },
+        });
+
+        // Debug logging
+        if (account?.address && chain) {
+          console.log('Wallet Connection Debug:', {
+            address: account.address,
+            ensName,
+            ensAvatar,
+            isEnsNameLoading,
+            isEnsAvatarLoading,
+            ensNameError,
+            ensAvatarError,
+            chainId: chain.id,
+            chainName: chain.name
+          });
+        }
+
         return (
           <>
             {(() => {
@@ -38,10 +72,6 @@ export const RainbowKitCustomConnectButton = () => {
                 );
               }
 
-              if (chain.unsupported || chain.id !== targetNetwork.id) {
-                return <WrongNetworkDropdown />;
-              }
-
               return (
                 <>
                   <div className="flex flex-col items-center mr-1">
@@ -50,14 +80,20 @@ export const RainbowKitCustomConnectButton = () => {
                       {chain.name}
                     </span>
                   </div>
-                  <AddressInfoDropdown
-                    address={account.address as Address}
-                    displayName={account.displayName}
-                    ensAvatar={account.ensAvatar}
-                    blockExplorerAddressLink={blockExplorerAddressLink}
-                  />
-                  <AddressQRCodeModal address={account.address as Address} modalId="qrcode-modal" />
-                  <RevealBurnerPKModal />
+                  {chain.unsupported || chain.id !== targetNetwork.id ? (
+                    <WrongNetworkDropdown />
+                  ) : (
+                    <>
+                      <AddressInfoDropdown
+                        address={account.address as Address}
+                        displayName={ensName || account.displayName}
+                        ensAvatar={ensAvatar || account.ensAvatar}
+                        blockExplorerAddressLink={blockExplorerAddressLink}
+                      />
+                      <AddressQRCodeModal address={account.address as Address} modalId="qrcode-modal" />
+                      <RevealBurnerPKModal />
+                    </>
+                  )}
                 </>
               );
             })()}
