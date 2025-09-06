@@ -102,7 +102,7 @@ export default function AboutPage() {
                   <div className="w-12 h-12 rounded-full bg-amber-100/60 dark:bg-amber-600/20 flex items-center justify-center">
                     <SparklesIcon className="h-6 w-6 text-amber-600 dark:text-amber-300" />
                   </div>
-                  <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white leading-tight">About GoldTrace</h1>
+                  <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white leading-tight">About AGUDE3</h1>
                 </div>
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                   At AGUDE3, we believe trust is the most valuable asset in the gold industry. We’re on a mission to bring unprecedented transparency and accountability to the global gold supply chain by using the power of blockchain technology.
