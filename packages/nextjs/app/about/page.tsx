@@ -298,7 +298,9 @@ export default function AboutPage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="p-8 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-lg text-center border border-gray-200 dark:border-gray-800">
-              <img src="https://i.pravatar.cc/150?img=32" alt="Aniwa Mensah" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-amber-500" />
+               <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?crop=faces&fit=crop&w=200&h=200" 
+             alt="Anthony Gudu" 
+             className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-amber-500" />
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Anthony Gudu</h3>
               <p className="text-amber-600 dark:text-amber-400 font-medium">Founder & CEO</p>
               <p className="mt-4 text-gray-600 dark:text-gray-300 text-sm">
