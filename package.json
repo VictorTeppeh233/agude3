@@ -50,6 +50,7 @@
     "verify": "yarn hardhat:verify"
   },
   "devDependencies": {
+    "hardhat": "^3.0.4",
     "husky": "~9.1.6",
     "lint-staged": "~13.2.2"
   },

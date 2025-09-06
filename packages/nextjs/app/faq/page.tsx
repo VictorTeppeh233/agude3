@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     q: "Is my personal data stored on-chain?",
-    a: "No — only non-personal, cryptographic anchors and provenance metadata are stored on-chain. Sensitive or personal information, such as partner details or specific transaction amounts, is kept off-chain in secure, permissioned databases and shared only with authorized partners.",
+    a: "No — only non-personal, cryptographic anchors and provenance metadata are stored on-chain. Sensitive or personal information, such as partner details or specific transaction amounts, is kept off-chain in secure, permission databases and shared only with authorized partners.",
   },
   {
     q: "Which networks do you support?",
@@ -53,11 +53,11 @@ const faqs = [
   },
   {
     q: "How do you ensure the physical gold matches the digital certificate?",
-    a: "Physical and digital integrity is a critical aspect of our solution. We work with certified assayers and auditors at the point of origin who physically inspect and weigh the gold before its unique certificate is created. This initial 'minting' event is verified by multiple network participants to ensure accuracy.",
+  a: "Physical and digital integrity is a critical aspect of our solution. We work with certified assayers and auditors at the point of origin who physically inspect and weigh the gold before its unique certificate is created. This initial &apos;minting&apos; event is verified by multiple network participants to ensure accuracy.",
   },
   {
     q: "What makes your blockchain solution different from others?",
-    a: "Unlike public, anonymous blockchains, AGUDE3 uses a purpose-built, permissioned network. This provides enterprise-grade scalability, predictable transaction costs, and ensures all network participants are known and trusted entities within the gold supply chain.",
+    a: "Unlike public, anonymous blockchains, AGUDE3 uses a purpose-built, permission network. This provides enterprise-grade scalability, predictable transaction costs, and ensures all network participants are known and trusted entities within the gold supply chain.",
   },
   {
     q: "What are the costs involved with using AGUDE3?",

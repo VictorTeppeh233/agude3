@@ -104,7 +104,7 @@ export default function TechnologyPage() {
                 </div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">Enterprise-Grade Security</h3>
                 <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
-                  Our platform features a permissioned blockchain network, ensuring only verified partners can transact. We employ robust cryptographic protocols and conduct regular third-party audits.
+                  Our platform features a permission blockchain network, ensuring only verified partners can transact. We employ robust cryptographic protocols and conduct regular third-party audits.
                 </p>
               </div>
             </div>
@@ -123,13 +123,13 @@ export default function TechnologyPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Blockchain Architecture: The Engine of Trust</h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Our core infrastructure is a purpose-built, permissioned blockchain network designed specifically for the high-value gold supply chain.
+              Our core infrastructure is a purpose-built, permission blockchain network designed specifically for the high-value gold supply chain.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="p-8 bg-white dark:bg-gray-950 rounded-lg shadow-md border border-gray-200 dark:border-gray-800 text-center">
               <CubeTransparentIcon className="h-12 w-12 text-amber-600 dark:text-amber-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Permissioned Network</h3>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Permission Network</h3>
               <p className="text-gray-600 dark:text-gray-300">
                 Unlike public blockchains, our network ensures that only vetted industry participants (miners, refiners, vaults) can operate nodes, maintaining a secure and trusted ecosystem.
               </p>

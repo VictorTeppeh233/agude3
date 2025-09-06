@@ -299,10 +299,10 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="p-8 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-lg text-center border border-gray-200 dark:border-gray-800">
               <img src="https://i.pravatar.cc/150?img=32" alt="Aniwa Mensah" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-amber-500" />
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Aniwa Mensah</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Anthony Gudu</h3>
               <p className="text-amber-600 dark:text-amber-400 font-medium">Founder & CEO</p>
               <p className="mt-4 text-gray-600 dark:text-gray-300 text-sm">
-                Aniwa is a visionary leader with over a decade of experience in the commodities market and a deep passion for blockchain's potential to drive global change.
+                Aniwa is a visionary leader with over a decade of experience in the commodities market and a deep passion for blockchain&apos;s potential to drive global change.
               </p>
             </div>
             <div className="p-8 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-lg text-center border border-gray-200 dark:border-gray-800">
@@ -310,7 +310,7 @@ export default function AboutPage() {
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Kofi Asante</h3>
               <p className="text-amber-600 dark:text-amber-400 font-medium">Head of Partnerships</p>
               <p className="mt-4 text-gray-600 dark:text-gray-300 text-sm">
-                Kofi's expertise in business development and his extensive network within the mining community are crucial to building our global partner ecosystem.
+                Kofi&apos;s expertise in business development and his extensive network within the mining community are crucial to building our global partner ecosystem.
               </p>
             </div>
             <div className="p-8 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-lg text-center border border-gray-200 dark:border-gray-800">
